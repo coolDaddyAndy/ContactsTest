@@ -13,6 +13,7 @@
 		FDA0C97D29C9D4810065A72A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA0C97C29C9D4810065A72A /* MainViewController.swift */; };
 		FDA0C98229C9D4860065A72A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDA0C98129C9D4860065A72A /* Assets.xcassets */; };
 		FDA0C98529C9D4860065A72A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA0C98329C9D4860065A72A /* LaunchScreen.storyboard */; };
+		FDB5BACD29CA113D0045C06D /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB5BACC29CA113D0045C06D /* UIView + Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FDA0C98129C9D4860065A72A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDA0C98429C9D4860065A72A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDA0C98629C9D4860065A72A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDB5BACC29CA113D0045C06D /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +50,7 @@
 		FD2EB11A29C9EA6800014A8F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FD2EB11B29C9EA9B00014A8F /* MainTableViewCell.swift */,
+				FDB5BACA29CA10DF0045C06D /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -75,6 +77,7 @@
 				FDA0C98C29C9DCC40065A72A /* Application */,
 				FDA0C98F29C9DF3B0065A72A /* MainModule */,
 				FD2EB11729C9E73700014A8F /* Resources */,
+				FDB5BAC929CA10AE0045C06D /* Extensions */,
 				FDA0C98D29C9DDEC0065A72A /* SupportingFiles */,
 			);
 			path = ContactsTest;
@@ -113,6 +116,30 @@
 				FDA0C98E29C9DEC10065A72A /* Controllers */,
 			);
 			path = MainModule;
+			sourceTree = "<group>";
+		};
+		FDB5BAC929CA10AE0045C06D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FDB5BACB29CA11130045C06D /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FDB5BACA29CA10DF0045C06D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FD2EB11B29C9EA9B00014A8F /* MainTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FDB5BACB29CA11130045C06D /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				FDB5BACC29CA113D0045C06D /* UIView + Extensions.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDB5BACD29CA113D0045C06D /* UIView + Extensions.swift in Sources */,
 				FD2EB11929C9E75800014A8F /* Resources.swift in Sources */,
 				FDA0C97D29C9D4810065A72A /* MainViewController.swift in Sources */,
 				FD2EB11C29C9EA9B00014A8F /* MainTableViewCell.swift in Sources */,
