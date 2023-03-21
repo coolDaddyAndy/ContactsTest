@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let navigationController = UINavigationController(rootViewController: MainViewController())
+        let navigationController = UINavigationController(rootViewController: MainTableViewController())
         if #available(iOS 13.0, *) {
             navigationController.navigationBar.scrollEdgeAppearance = navigationController.navigationBar.standardAppearance
         }

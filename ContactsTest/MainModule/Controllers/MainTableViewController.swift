@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MainViewController: UITableViewController {
+final class MainTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +27,13 @@ final class MainViewController: UITableViewController {
     }
     
     @objc private func editTapped() {
-        
+        let editTableViewController = EditingTableViewController()
+        navigationController?.pushViewController(editTableViewController, animated: true)
     }
 }
 
 // MARK: - UITableViewDataSource
-extension MainViewController {
+extension MainTableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         Resources.NameFields.allCases.count
@@ -52,7 +53,7 @@ extension MainViewController {
 
 
 // MARK: - UITableViewDelegate
-extension MainViewController {
+extension MainTableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         indexPath.row == 1 ? UITableView.automaticDimension : 44

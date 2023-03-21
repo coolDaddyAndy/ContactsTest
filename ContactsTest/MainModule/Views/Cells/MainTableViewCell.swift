@@ -17,7 +17,7 @@ class MainTableViewCell: UITableViewCell {
         let label = UILabel()
         label.textAlignment = .right
         label.numberOfLines = 0
-        label.text = "For test"
+        label.text = "For test For test For test For test For test For test For test For test For test For test For test For test "
         return label
     }()
     
@@ -46,6 +46,8 @@ extension MainTableViewCell {
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
+            heightAnchor.constraint(greaterThanOrEqualToConstant: 44),
+            
             nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             nameLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.35)
