@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainTableViewCell: UITableViewCell {
+final class MainTableViewCell: UITableViewCell {
     
     static var reuseID: String = "idMainTableViewCell"
     
@@ -17,7 +17,7 @@ class MainTableViewCell: UITableViewCell {
         let label = UILabel()
         label.textAlignment = .right
         label.numberOfLines = 0
-        label.text = "For test For test For test For test For test For test For test For test For test For test For test For test "
+        label.text = "For test"
         return label
     }()
     
@@ -33,6 +33,7 @@ class MainTableViewCell: UITableViewCell {
     }
     
     private func setupViews() {
+        selectionStyle = .none
         addView(nameLabel)
         addView(valueLabel)
     }

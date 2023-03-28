@@ -5,7 +5,7 @@
 //  Created by Andrei Sushkou on 21.03.23.
 //
 
-import Foundation
+import UIKit
 
 enum Resources {
     
@@ -15,4 +15,5 @@ enum Resources {
         case birthday  = "01.01.1990"
         case gender    = "Male"
     }
+    
 }

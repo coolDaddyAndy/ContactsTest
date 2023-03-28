@@ -13,8 +13,8 @@ final class EditingTableViewController: UITableViewController {
         super.viewDidLoad()
         
         setupViews()
-        tableView.register(MainTableViewCell.self,
-                           forCellReuseIdentifier: MainTableViewCell.reuseID)
+        tableView.register(TextViewTableViewCell.self,
+                           forCellReuseIdentifier: TextViewTableViewCell.reuseID)
     }
 
     private func setupViews() {
@@ -39,12 +39,13 @@ extension EditingTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.reuseID,
-                                                       for: indexPath) as? MainTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TextViewTableViewCell.reuseID,
+                                                       for: indexPath) as? TextViewTableViewCell else {
             return UITableViewCell()
         }
         
         let fieldName = Resources.NameFields.allCases[indexPath.row].rawValue
+        cell.nameTextViewDelegate = self
         cell.configure(name: fieldName)
         return cell
     }
@@ -57,4 +58,14 @@ extension EditingTableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         indexPath.row == 1 ? UITableView.automaticDimension : 44
     }
+}
+
+
+extension EditingTableViewController: NameTextViewProtocol {
+    func changeSize() {
+        tableView.beginUpdates()
+        tableView.endUpdates()
+    }
+    
+    
 }
