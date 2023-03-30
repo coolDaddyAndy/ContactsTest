@@ -44,10 +44,19 @@ extension EditingTableViewController {
             return UITableViewCell()
         }
         
-        let fieldName = Resources.NameFields.allCases[indexPath.row].rawValue
-        cell.nameTextViewDelegate = self
-        cell.configure(name: fieldName)
-        return cell
+        switch indexPath.row {
+        case 0...2:
+            let fieldName = Resources.NameFields.allCases[indexPath.row].rawValue
+            cell.nameTextViewDelegate = self
+            if indexPath.row == 1 {
+                cell.configure(name: fieldName, scrollEnable: false)
+            } else {
+                cell.configure(name: fieldName, scrollEnable: true)
+            }
+            return cell
+        default:
+            return UITableViewCell()
+        }
     }
 }
 
