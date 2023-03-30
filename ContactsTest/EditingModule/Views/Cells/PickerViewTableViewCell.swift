@@ -8,7 +8,7 @@
 import UIKit
 
 
-final class PickerViewTableVIewCell: UITableViewCell {
+final class PickerViewTableViewCell: UITableViewCell {
     
     static var reuseID: String = "idPickerView"
     
@@ -17,6 +17,13 @@ final class PickerViewTableVIewCell: UITableViewCell {
         label.font = Resources.Fonts.helveticaNeue(size: 20)
         return label
     }()
+    
+    private let genderTextField: GenderTextField = {
+        let field = GenderTextField()
+        return field
+    }()
+    
+    private let genderPicker = GenderPickerView()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -32,6 +39,10 @@ final class PickerViewTableVIewCell: UITableViewCell {
     private func setupViews() {
         selectionStyle = .none
         addView(nameLabel)
+        
+        genderPicker.genderDelegate = self
+        genderTextField.inputView = genderPicker
+        contentView.addView(genderTextField)
     }
     
     public func configure(name: String) {
@@ -39,8 +50,15 @@ final class PickerViewTableVIewCell: UITableViewCell {
     }
 }
 
+extension PickerViewTableViewCell: GenderPickerViewProtocol {
+    func didSelectRow(row: Int) {
+        genderTextField.text = Resources.Gender.allCases[row].rawValue
+        genderTextField.resignFirstResponder()
+    }
+}
 
-extension PickerViewTableVIewCell {
+
+extension PickerViewTableViewCell {
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
@@ -48,7 +66,13 @@ extension PickerViewTableVIewCell {
             nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             nameLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.35),
+            
+            genderTextField.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
+            genderTextField.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 10),
+            genderTextField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
+            genderTextField.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5)
+            
+            
         ])
     }
 }
-

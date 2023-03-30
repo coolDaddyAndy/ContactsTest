@@ -18,8 +18,9 @@
 		FDA0C98229C9D4860065A72A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDA0C98129C9D4860065A72A /* Assets.xcassets */; };
 		FDA0C98529C9D4860065A72A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA0C98329C9D4860065A72A /* LaunchScreen.storyboard */; };
 		FDB5BACD29CA113D0045C06D /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB5BACC29CA113D0045C06D /* UIView + Extensions.swift */; };
-		FDEB537329D61B630039B7F3 /* PickerViewTableVIewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB537229D61B630039B7F3 /* PickerViewTableVIewCell.swift */; };
+		FDEB537329D61B630039B7F3 /* PickerViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB537229D61B630039B7F3 /* PickerViewTableViewCell.swift */; };
 		FDEB537529D61D870039B7F3 /* GenderPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB537429D61D870039B7F3 /* GenderPickerView.swift */; };
+		FDEB537729D620900039B7F3 /* GenderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEB537629D620900039B7F3 /* GenderTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +37,9 @@
 		FDA0C98429C9D4860065A72A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDA0C98629C9D4860065A72A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDB5BACC29CA113D0045C06D /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
-		FDEB537229D61B630039B7F3 /* PickerViewTableVIewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewTableVIewCell.swift; sourceTree = "<group>"; };
+		FDEB537229D61B630039B7F3 /* PickerViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewTableViewCell.swift; sourceTree = "<group>"; };
 		FDEB537429D61D870039B7F3 /* GenderPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderPickerView.swift; sourceTree = "<group>"; };
+		FDEB537629D620900039B7F3 /* GenderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				FD4A26D729D373F500B513F9 /* Cells */,
 				FD4A26DA29D3767A00B513F9 /* NameTextView.swift */,
 				FDEB537429D61D870039B7F3 /* GenderPickerView.swift */,
+				FDEB537629D620900039B7F3 /* GenderTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -82,7 +85,7 @@
 			children = (
 				FD4A26D829D3745A00B513F9 /* TextViewTableViewCell.swift */,
 				FD8C9AAD29D5EF03008009D4 /* DatePickerTableViewCell.swift */,
-				FDEB537229D61B630039B7F3 /* PickerViewTableVIewCell.swift */,
+				FDEB537229D61B630039B7F3 /* PickerViewTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -264,7 +267,7 @@
 			files = (
 				FDB5BACD29CA113D0045C06D /* UIView + Extensions.swift in Sources */,
 				FD2EB11929C9E75800014A8F /* Resources.swift in Sources */,
-				FDEB537329D61B630039B7F3 /* PickerViewTableVIewCell.swift in Sources */,
+				FDEB537329D61B630039B7F3 /* PickerViewTableViewCell.swift in Sources */,
 				FD77798D29CA4AAB009364A3 /* EditingTableViewController.swift in Sources */,
 				FDEB537529D61D870039B7F3 /* GenderPickerView.swift in Sources */,
 				FDA0C97D29C9D4810065A72A /* MainTableViewController.swift in Sources */,
@@ -272,6 +275,7 @@
 				FD4A26D929D3745A00B513F9 /* TextViewTableViewCell.swift in Sources */,
 				FD4A26DB29D3767A00B513F9 /* NameTextView.swift in Sources */,
 				FDA0C97929C9D4810065A72A /* AppDelegate.swift in Sources */,
+				FDEB537729D620900039B7F3 /* GenderTextField.swift in Sources */,
 				FD8C9AAE29D5EF03008009D4 /* DatePickerTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

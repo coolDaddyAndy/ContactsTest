@@ -24,7 +24,7 @@ enum Resources {
     }
     
     enum Gender: String, CaseIterable {
-        case noSpecified = "No speciified"
+        case noSpecified = "No specified"
         case male = "He/him"
         case female = "She/her"
     }

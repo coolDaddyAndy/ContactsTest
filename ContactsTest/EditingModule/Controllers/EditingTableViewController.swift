@@ -17,8 +17,8 @@ final class EditingTableViewController: UITableViewController {
                            forCellReuseIdentifier: TextViewTableViewCell.reuseID)
         tableView.register(DatePickerTableViewCell.self,
                            forCellReuseIdentifier: DatePickerTableViewCell.reuseID)
-        tableView.register(PickerViewTableVIewCell.self,
-                           forCellReuseIdentifier: PickerViewTableVIewCell.reuseID)
+        tableView.register(PickerViewTableViewCell.self,
+                           forCellReuseIdentifier: PickerViewTableViewCell.reuseID)
         
     }
 
@@ -68,8 +68,8 @@ extension EditingTableViewController {
             cell.configure(name: fieldName)
             return cell
         case 3:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: PickerViewTableVIewCell.reuseID,
-                                                           for: indexPath) as? PickerViewTableVIewCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: PickerViewTableViewCell.reuseID,
+                                                           for: indexPath) as? PickerViewTableViewCell else {
                 return UITableViewCell()
             }
             cell.configure(name: fieldName)

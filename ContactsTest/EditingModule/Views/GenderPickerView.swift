@@ -8,7 +8,7 @@
 import UIKit
 
 protocol GenderPickerViewProtocol: AnyObject {
-    func didSelectRow()
+    func didSelectRow(row: Int)
 }
 
 final class GenderPickerView: UIPickerView {
@@ -41,6 +41,6 @@ extension GenderPickerView: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        genderDelegate?.didSelectRow()
+        genderDelegate?.didSelectRow(row: row)
     }
 }
