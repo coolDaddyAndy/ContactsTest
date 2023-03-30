@@ -12,8 +12,8 @@ enum Resources {
     enum NameFields: String, CaseIterable {
         case firstName = "First name"
         case lastName  = "Last name"
-        case birthday  = "Birthday"
         case gender    = "Gender"
+        case birthday  = "Birthday"
     }
     
 }
