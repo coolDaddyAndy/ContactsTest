@@ -24,5 +24,6 @@ final class NameTextView: UITextView {
         textColor = .lightGray
         textAlignment = .right
         isScrollEnabled = false
+        self.font = Resources.Fonts.helveticaNeue(size: 14)
     }
 }

@@ -11,13 +11,18 @@ final class MainTableViewCell: UITableViewCell {
     
     static var reuseID: String = "idMainTableViewCell"
     
-    private let nameLabel = UILabel()
+    private let nameLabel: UILabel = {
+        let label = UILabel()
+        label.font = Resources.Fonts.helveticaNeue(size: 20)
+        return label
+    }()
     
     private let valueLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .right
         label.numberOfLines = 0
         label.text = "For test"
+        label.font = Resources.Fonts.helveticaNeue(size: 20)
         return label
     }()
     

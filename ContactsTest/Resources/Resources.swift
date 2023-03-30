@@ -16,4 +16,9 @@ enum Resources {
         case birthday  = "Birthday"
     }
     
+    enum Fonts {
+        static func helveticaNeue (size: CGFloat) -> UIFont? {
+            return UIFont(name: "Helvetica Neue", size: size)
+        }
+    }
 }

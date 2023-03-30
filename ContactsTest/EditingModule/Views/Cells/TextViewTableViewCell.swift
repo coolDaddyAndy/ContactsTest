@@ -17,8 +17,17 @@ final class TextViewTableViewCell: UITableViewCell {
     
     static var reuseID: String = "idTextViewCell"
     
-    private let nameLabel = UILabel()
-    private let nameTextView = NameTextView()
+    private let nameLabel: UILabel = {
+        let label = UILabel()
+        label.font = Resources.Fonts.helveticaNeue(size: 20)
+        return label
+    }()
+    
+    private let nameTextView: NameTextView = {
+       let view = NameTextView()
+        view.font = Resources.Fonts.helveticaNeue(size: 20)
+        return view
+    }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
