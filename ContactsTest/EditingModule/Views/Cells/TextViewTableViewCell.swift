@@ -15,7 +15,7 @@ final class TextViewTableViewCell: UITableViewCell {
     
     weak var nameTextViewDelegate: NameTextViewProtocol?
     
-    static var reuseID: String = "idMainTableViewCell"
+    static var reuseID: String = "idTextViewCell"
     
     private let nameLabel = UILabel()
     private let nameTextView = NameTextView()

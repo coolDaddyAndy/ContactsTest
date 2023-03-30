@@ -15,6 +15,8 @@ final class EditingTableViewController: UITableViewController {
         setupViews()
         tableView.register(TextViewTableViewCell.self,
                            forCellReuseIdentifier: TextViewTableViewCell.reuseID)
+        tableView.register(DatePickerTableViewCell.self,
+                           forCellReuseIdentifier: DatePickerTableViewCell.reuseID)
     }
 
     private func setupViews() {
@@ -39,20 +41,28 @@ extension EditingTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TextViewTableViewCell.reuseID,
-                                                       for: indexPath) as? TextViewTableViewCell else {
-            return UITableViewCell()
-        }
+        
+        let fieldName = Resources.NameFields.allCases[indexPath.row].rawValue
         
         switch indexPath.row {
         case 0...2:
-            let fieldName = Resources.NameFields.allCases[indexPath.row].rawValue
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TextViewTableViewCell.reuseID,
+                                                           for: indexPath) as? TextViewTableViewCell else {
+                return UITableViewCell()
+            }
             cell.nameTextViewDelegate = self
             if indexPath.row == 1 {
                 cell.configure(name: fieldName, scrollEnable: false)
             } else {
                 cell.configure(name: fieldName, scrollEnable: true)
             }
+            return cell
+        case 3:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: DatePickerTableViewCell.reuseID,
+                                                           for: indexPath) as? DatePickerTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.configure(name: fieldName)
             return cell
         default:
             return UITableViewCell()
