@@ -17,6 +17,9 @@ final class EditingTableViewController: UITableViewController {
                            forCellReuseIdentifier: TextViewTableViewCell.reuseID)
         tableView.register(DatePickerTableViewCell.self,
                            forCellReuseIdentifier: DatePickerTableViewCell.reuseID)
+        tableView.register(PickerViewTableVIewCell.self,
+                           forCellReuseIdentifier: PickerViewTableVIewCell.reuseID)
+        
     }
 
     private func setupViews() {
@@ -45,7 +48,7 @@ extension EditingTableViewController {
         let fieldName = Resources.NameFields.allCases[indexPath.row].rawValue
         
         switch indexPath.row {
-        case 0...2:
+        case 0...1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: TextViewTableViewCell.reuseID,
                                                            for: indexPath) as? TextViewTableViewCell else {
                 return UITableViewCell()
@@ -57,9 +60,16 @@ extension EditingTableViewController {
                 cell.configure(name: fieldName, scrollEnable: true)
             }
             return cell
-        case 3:
+        case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: DatePickerTableViewCell.reuseID,
                                                            for: indexPath) as? DatePickerTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.configure(name: fieldName)
+            return cell
+        case 3:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: PickerViewTableVIewCell.reuseID,
+                                                           for: indexPath) as? PickerViewTableVIewCell else {
                 return UITableViewCell()
             }
             cell.configure(name: fieldName)
