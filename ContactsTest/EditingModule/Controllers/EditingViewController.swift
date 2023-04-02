@@ -9,6 +9,8 @@ import UIKit
 
 final class EditingViewController: UIViewController {
     
+    private var userModel = UserModel()
+    
     private let editingTableView = EditingTableView()
 
     override func viewDidLoad() {
@@ -17,6 +19,16 @@ final class EditingViewController: UIViewController {
         setupViews()
         setConstraints()
     }
+    
+    init(_ userModel: UserModel) {
+        self.userModel = userModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 
     private func setupViews() {
         title = "Contact"
