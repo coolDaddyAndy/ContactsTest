@@ -15,6 +15,7 @@ final class MainTableViewController: UITableViewController {
         super.viewDidLoad()
         
         setupViews()
+        getUserModel()
         tableView.register(MainTableViewCell.self,
                            forCellReuseIdentifier: MainTableViewCell.reuseID)
     }
@@ -32,6 +33,10 @@ final class MainTableViewController: UITableViewController {
         let editTableViewController = EditingViewController(userModel)
         navigationItem.backButtonTitle = "Back"
         navigationController?.pushViewController(editTableViewController, animated: true)
+    }
+    
+    private func getUserModel() {
+        userModel = UserDefaultsManager.getUserModel()
     }
 }
 
