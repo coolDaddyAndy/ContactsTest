@@ -11,7 +11,8 @@
 		FD2EB11C29C9EA9B00014A8F /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2EB11B29C9EA9B00014A8F /* MainTableViewCell.swift */; };
 		FD4A26D929D3745A00B513F9 /* TextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4A26D829D3745A00B513F9 /* TextViewTableViewCell.swift */; };
 		FD4A26DB29D3767A00B513F9 /* NameTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4A26DA29D3767A00B513F9 /* NameTextView.swift */; };
-		FD77798D29CA4AAB009364A3 /* EditingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD77798C29CA4AAB009364A3 /* EditingTableViewController.swift */; };
+		FD77798D29CA4AAB009364A3 /* EditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD77798C29CA4AAB009364A3 /* EditingViewController.swift */; };
+		FD8A960D29DA11670000717F /* EditingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8A960C29DA11670000717F /* EditingTableView.swift */; };
 		FD8C9AAE29D5EF03008009D4 /* DatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8C9AAD29D5EF03008009D4 /* DatePickerTableViewCell.swift */; };
 		FDA0C97929C9D4810065A72A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA0C97829C9D4810065A72A /* AppDelegate.swift */; };
 		FDA0C97D29C9D4810065A72A /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA0C97C29C9D4810065A72A /* MainTableViewController.swift */; };
@@ -28,7 +29,8 @@
 		FD2EB11B29C9EA9B00014A8F /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		FD4A26D829D3745A00B513F9 /* TextViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTableViewCell.swift; sourceTree = "<group>"; };
 		FD4A26DA29D3767A00B513F9 /* NameTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextView.swift; sourceTree = "<group>"; };
-		FD77798C29CA4AAB009364A3 /* EditingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingTableViewController.swift; sourceTree = "<group>"; };
+		FD77798C29CA4AAB009364A3 /* EditingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingViewController.swift; sourceTree = "<group>"; };
+		FD8A960C29DA11670000717F /* EditingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingTableView.swift; sourceTree = "<group>"; };
 		FD8C9AAD29D5EF03008009D4 /* DatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTableViewCell.swift; sourceTree = "<group>"; };
 		FDA0C97529C9D4810065A72A /* ContactsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA0C97829C9D4810065A72A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				FD4A26DA29D3767A00B513F9 /* NameTextView.swift */,
 				FDEB537429D61D870039B7F3 /* GenderPickerView.swift */,
 				FDEB537629D620900039B7F3 /* GenderTextField.swift */,
+				FD8A960C29DA11670000717F /* EditingTableView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -102,7 +105,7 @@
 		FD77798B29CA4A5F009364A3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FD77798C29CA4AAB009364A3 /* EditingTableViewController.swift */,
+				FD77798C29CA4AAB009364A3 /* EditingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -268,12 +271,13 @@
 				FDB5BACD29CA113D0045C06D /* UIView + Extensions.swift in Sources */,
 				FD2EB11929C9E75800014A8F /* Resources.swift in Sources */,
 				FDEB537329D61B630039B7F3 /* PickerViewTableViewCell.swift in Sources */,
-				FD77798D29CA4AAB009364A3 /* EditingTableViewController.swift in Sources */,
+				FD77798D29CA4AAB009364A3 /* EditingViewController.swift in Sources */,
 				FDEB537529D61D870039B7F3 /* GenderPickerView.swift in Sources */,
 				FDA0C97D29C9D4810065A72A /* MainTableViewController.swift in Sources */,
 				FD2EB11C29C9EA9B00014A8F /* MainTableViewCell.swift in Sources */,
 				FD4A26D929D3745A00B513F9 /* TextViewTableViewCell.swift in Sources */,
 				FD4A26DB29D3767A00B513F9 /* NameTextView.swift in Sources */,
+				FD8A960D29DA11670000717F /* EditingTableView.swift in Sources */,
 				FDA0C97929C9D4810065A72A /* AppDelegate.swift in Sources */,
 				FDEB537729D620900039B7F3 /* GenderTextField.swift in Sources */,
 				FD8C9AAE29D5EF03008009D4 /* DatePickerTableViewCell.swift in Sources */,

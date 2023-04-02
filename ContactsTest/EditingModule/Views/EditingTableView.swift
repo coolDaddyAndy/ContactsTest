@@ -1,49 +1,42 @@
 //
-//  EditingTableViewController.swift
+//  EditingTableView.swift
 //  ContactsTest
 //
-//  Created by Andrei Sushkou on 21.03.23.
+//  Created by Andrei Sushkou on 2.04.23.
 //
 
 import UIKit
 
-final class EditingTableViewController: UITableViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+final class EditingTableView: UITableView {
+    
+    override init(frame: CGRect, style: UITableView.Style) {
+        super.init(frame: frame, style: style)
         
-        setupViews()
-        tableView.register(TextViewTableViewCell.self,
-                           forCellReuseIdentifier: TextViewTableViewCell.reuseID)
-        tableView.register(DatePickerTableViewCell.self,
-                           forCellReuseIdentifier: DatePickerTableViewCell.reuseID)
-        tableView.register(PickerViewTableViewCell.self,
-                           forCellReuseIdentifier: PickerViewTableViewCell.reuseID)
+        register(TextViewTableViewCell.self,
+                 forCellReuseIdentifier: TextViewTableViewCell.reuseID)
+        register(DatePickerTableViewCell.self,
+                 forCellReuseIdentifier: DatePickerTableViewCell.reuseID)
+        register(PickerViewTableViewCell.self,
+                 forCellReuseIdentifier: PickerViewTableViewCell.reuseID)
         
-    }
-
-    private func setupViews() {
-        title = "Contact"
-        view.backgroundColor = .lightGray
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save changes",
-                                                            style: .plain,
-                                                            target: self,
-                                                            action: #selector(editTapped))
+        delegate = self
+        dataSource = self
     }
     
-    @objc private func editTapped() {
-        
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
+    
 }
 
 // MARK: - UITableViewDataSource
-extension EditingTableViewController {
+extension EditingTableView: UITableViewDataSource {
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         Resources.NameFields.allCases.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let fieldName = Resources.NameFields.allCases[indexPath.row].rawValue
         
@@ -82,19 +75,17 @@ extension EditingTableViewController {
 
 
 // MARK: - UITableViewDelegate
-extension EditingTableViewController {
+extension EditingTableView: UITableViewDelegate {
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         indexPath.row == 1 ? UITableView.automaticDimension : 44
     }
 }
 
 
-extension EditingTableViewController: NameTextViewProtocol {
+extension EditingTableView: NameTextViewProtocol {
     func changeSize() {
-        tableView.beginUpdates()
-        tableView.endUpdates()
+        beginUpdates()
+        endUpdates()
     }
-    
-    
 }
