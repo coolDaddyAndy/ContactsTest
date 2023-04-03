@@ -22,7 +22,6 @@ final class MainTableViewController: UITableViewController {
 
     private func setupViews() {
         title = "Contact"
-        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit",
                                                             style: .plain,
                                                             target: self,
