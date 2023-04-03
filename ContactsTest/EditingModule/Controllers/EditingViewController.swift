@@ -34,10 +34,13 @@ final class EditingViewController: UIViewController {
         title = "Contact"
         view.backgroundColor = .lightGray
         view.addView(editingTableView)
+    
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save changes",
                                                             style: .plain,
                                                             target: self,
                                                             action: #selector(saveChangesTapped))
+        let backBarButtonItem = UIBarButtonItem.createCustomButton(selector: #selector(backButtonTapped))
+        navigationItem.leftBarButtonItem = backBarButtonItem
     }
     
     @objc private func saveChangesTapped() {
@@ -46,6 +49,10 @@ final class EditingViewController: UIViewController {
         } else {
             presentSimpleAlert(title: "Ooops!", message: "Fill in all the fields.")
         }
+    }
+    
+    @objc private func backButtonTapped() {
+        print ("back")
     }
     
     private func authFields() -> Bool {
