@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD2AA78029DB399A009E4A26 /* UIViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2AA77F29DB399A009E4A26 /* UIViewController + Extensions.swift */; };
 		FD2EB11929C9E75800014A8F /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2EB11829C9E75800014A8F /* Resources.swift */; };
 		FD2EB11C29C9EA9B00014A8F /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2EB11B29C9EA9B00014A8F /* MainTableViewCell.swift */; };
 		FD4A26D929D3745A00B513F9 /* TextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4A26D829D3745A00B513F9 /* TextViewTableViewCell.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD2AA77F29DB399A009E4A26 /* UIViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extensions.swift"; sourceTree = "<group>"; };
 		FD2EB11829C9E75800014A8F /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		FD2EB11B29C9EA9B00014A8F /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		FD4A26D829D3745A00B513F9 /* TextViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTableViewCell.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				FDB5BACC29CA113D0045C06D /* UIView + Extensions.swift */,
+				FD2AA77F29DB399A009E4A26 /* UIViewController + Extensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				FD77798D29CA4AAB009364A3 /* EditingViewController.swift in Sources */,
 				FDEB537529D61D870039B7F3 /* GenderPickerView.swift in Sources */,
 				FDA0C97D29C9D4810065A72A /* MainTableViewController.swift in Sources */,
+				FD2AA78029DB399A009E4A26 /* UIViewController + Extensions.swift in Sources */,
 				FD2EB11C29C9EA9B00014A8F /* MainTableViewCell.swift in Sources */,
 				FD4A26D929D3745A00B513F9 /* TextViewTableViewCell.swift in Sources */,
 				FD8A961029DA167B0000717F /* UserModel.swift in Sources */,

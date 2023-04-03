@@ -37,11 +37,26 @@ final class EditingViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save changes",
                                                             style: .plain,
                                                             target: self,
-                                                            action: #selector(editTapped))
+                                                            action: #selector(saveChangesTapped))
     }
     
-    @objc private func editTapped() {
-        
+    @objc private func saveChangesTapped() {
+        if authFields() {
+            presentSimpleAlert(title: "Success!", message: "Saved!")
+        } else {
+            presentSimpleAlert(title: "Ooops!", message: "Fill in all the fields.")
+        }
+    }
+    
+    private func authFields() -> Bool {
+        if userModel.firstName != "" ||
+            userModel.lastName != "" ||
+            userModel.birthday != "" ||
+            userModel.gender != "" ||
+            userModel.gender != "No specified" {
+            return true
+        }
+        return false
     }
 }
 
