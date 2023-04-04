@@ -14,7 +14,7 @@ extension UITableView {
         register(type, forCellReuseIdentifier: className)
     }
     
-    func dequeReusableCell<T>(_ type: T.Type) -> T? {
+    func dequeueReusableCell<T>(_ type: T.Type) -> T? {
         let className = String(describing: type)
         return dequeueReusableCell(withIdentifier: className) as? T
     }

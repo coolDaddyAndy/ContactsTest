@@ -9,6 +9,8 @@ import UIKit
 
 final class EditingTableView: UITableView {
     
+    private var userModel = UserModel()
+    
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
 
@@ -39,7 +41,7 @@ extension EditingTableView: UITableViewDataSource {
         
         switch indexPath.row {
         case 0...1:
-            guard let cell = dequeReusableCell(TextViewTableViewCell.self) else {
+            guard let cell = dequeueReusableCell(TextViewTableViewCell.self) else {
                 return UITableViewCell()
             }
             cell.nameTextViewDelegate = self
@@ -50,14 +52,14 @@ extension EditingTableView: UITableViewDataSource {
             }
             return cell
         case 2:
-            guard let cell = dequeReusableCell(DatePickerTableViewCell.self) else {
+            guard let cell = dequeueReusableCell(DatePickerTableViewCell.self) else {
                 return UITableViewCell()
             }
             
             cell.configure(name: fieldName)
             return cell
         case 3:
-            guard let cell = dequeReusableCell(PickerViewTableViewCell.self) else {
+            guard let cell = dequeueReusableCell(PickerViewTableViewCell.self) else {
                 return UITableViewCell()
             }
             cell.configure(name: fieldName)
