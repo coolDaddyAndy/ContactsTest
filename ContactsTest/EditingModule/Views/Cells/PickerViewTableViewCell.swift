@@ -45,8 +45,9 @@ final class PickerViewTableViewCell: UITableViewCell {
         contentView.addView(genderTextField)
     }
     
-    public func configure(name: String) {
+    public func configure(name: String, value: String) {
         nameLabel.text = name
+        genderTextField.text = value
     }
 }
 
