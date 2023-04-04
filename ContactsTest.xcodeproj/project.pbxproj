@@ -12,6 +12,8 @@
 		FD2EB11929C9E75800014A8F /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2EB11829C9E75800014A8F /* Resources.swift */; };
 		FD2EB11C29C9EA9B00014A8F /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2EB11B29C9EA9B00014A8F /* MainTableViewCell.swift */; };
 		FD49D25629DC95420088AC98 /* UITableView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD49D25529DC95420088AC98 /* UITableView + Extensions.swift */; };
+		FD49D25829DCB65A0088AC98 /* String + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD49D25729DCB65A0088AC98 /* String + Extensions.swift */; };
+		FD49D25A29DCB7320088AC98 /* Date + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD49D25929DCB7320088AC98 /* Date + Extensions.swift */; };
 		FD4A26D929D3745A00B513F9 /* TextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4A26D829D3745A00B513F9 /* TextViewTableViewCell.swift */; };
 		FD4A26DB29D3767A00B513F9 /* NameTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4A26DA29D3767A00B513F9 /* NameTextView.swift */; };
 		FD77798D29CA4AAB009364A3 /* EditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD77798C29CA4AAB009364A3 /* EditingViewController.swift */; };
@@ -35,6 +37,8 @@
 		FD2EB11829C9E75800014A8F /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		FD2EB11B29C9EA9B00014A8F /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		FD49D25529DC95420088AC98 /* UITableView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView + Extensions.swift"; sourceTree = "<group>"; };
+		FD49D25729DCB65A0088AC98 /* String + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extensions.swift"; sourceTree = "<group>"; };
+		FD49D25929DCB7320088AC98 /* Date + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extensions.swift"; sourceTree = "<group>"; };
 		FD4A26D829D3745A00B513F9 /* TextViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTableViewCell.swift; sourceTree = "<group>"; };
 		FD4A26DA29D3767A00B513F9 /* NameTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextView.swift; sourceTree = "<group>"; };
 		FD77798C29CA4AAB009364A3 /* EditingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingViewController.swift; sourceTree = "<group>"; };
@@ -205,6 +209,8 @@
 		FDB5BAC929CA10AE0045C06D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FD49D25729DCB65A0088AC98 /* String + Extensions.swift */,
+				FD49D25929DCB7320088AC98 /* Date + Extensions.swift */,
 				FDB5BACB29CA11130045C06D /* UIKit */,
 			);
 			path = Extensions;
@@ -310,10 +316,12 @@
 				FD4A26D929D3745A00B513F9 /* TextViewTableViewCell.swift in Sources */,
 				FD8A961029DA167B0000717F /* UserModel.swift in Sources */,
 				FD4A26DB29D3767A00B513F9 /* NameTextView.swift in Sources */,
+				FD49D25A29DCB7320088AC98 /* Date + Extensions.swift in Sources */,
 				FD8A960D29DA11670000717F /* EditingTableView.swift in Sources */,
 				FD2AA78229DB3CDA009E4A26 /* UIBarButtonItem + Extensions.swift in Sources */,
 				FD8A961329DA19C20000717F /* UserDefaultsManager.swift in Sources */,
 				FDA0C97929C9D4810065A72A /* AppDelegate.swift in Sources */,
+				FD49D25829DCB65A0088AC98 /* String + Extensions.swift in Sources */,
 				FDEB537729D620900039B7F3 /* GenderTextField.swift in Sources */,
 				FD8C9AAE29D5EF03008009D4 /* DatePickerTableViewCell.swift in Sources */,
 				FD49D25629DC95420088AC98 /* UITableView + Extensions.swift in Sources */,

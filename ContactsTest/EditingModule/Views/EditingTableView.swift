@@ -26,6 +26,9 @@ final class EditingTableView: UITableView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    public func setUserModel(_ model: UserModel) {
+        userModel = model
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -45,10 +48,12 @@ extension EditingTableView: UITableViewDataSource {
                 return UITableViewCell()
             }
             cell.nameTextViewDelegate = self
-            if indexPath.row == 1 {
-                cell.configure(name: fieldName, scrollEnable: false)
-            } else {
-                cell.configure(name: fieldName, scrollEnable: true)
+            
+            switch indexPath.row {
+            case 0: cell.configure(name: fieldName, scrollEnable: true, value: userModel.firstName)
+            case 1: cell.configure(name: fieldName, scrollEnable: false, value: userModel.lastName)
+            default:
+                cell.configure(name: fieldName, scrollEnable: true, value: userModel.firstName)
             }
             return cell
         case 2:
