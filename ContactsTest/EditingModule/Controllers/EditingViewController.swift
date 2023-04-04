@@ -53,7 +53,14 @@ final class EditingViewController: UIViewController {
     }
     
     @objc private func backButtonTapped() {
-        print ("back")
+        presentChangesAlert { value in
+            if value {
+                print(self.userModel)
+                self.navigationController?.popViewController(animated: true)
+            } else {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
     private func authFields() -> Bool {
