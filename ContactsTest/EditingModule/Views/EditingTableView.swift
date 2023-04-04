@@ -11,13 +11,10 @@ final class EditingTableView: UITableView {
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
-        
-        register(TextViewTableViewCell.self,
-                 forCellReuseIdentifier: TextViewTableViewCell.reuseID)
-        register(DatePickerTableViewCell.self,
-                 forCellReuseIdentifier: DatePickerTableViewCell.reuseID)
-        register(PickerViewTableViewCell.self,
-                 forCellReuseIdentifier: PickerViewTableViewCell.reuseID)
+
+        register(TextViewTableViewCell.self)
+        register(DatePickerTableViewCell.self)
+        register(PickerViewTableViewCell.self)
         
         delegate = self
         dataSource = self
@@ -42,8 +39,7 @@ extension EditingTableView: UITableViewDataSource {
         
         switch indexPath.row {
         case 0...1:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: TextViewTableViewCell.reuseID,
-                                                           for: indexPath) as? TextViewTableViewCell else {
+            guard let cell = dequeReusableCell(TextViewTableViewCell.self) else {
                 return UITableViewCell()
             }
             cell.nameTextViewDelegate = self
@@ -54,15 +50,14 @@ extension EditingTableView: UITableViewDataSource {
             }
             return cell
         case 2:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: DatePickerTableViewCell.reuseID,
-                                                           for: indexPath) as? DatePickerTableViewCell else {
+            guard let cell = dequeReusableCell(DatePickerTableViewCell.self) else {
                 return UITableViewCell()
             }
+            
             cell.configure(name: fieldName)
             return cell
         case 3:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: PickerViewTableViewCell.reuseID,
-                                                           for: indexPath) as? PickerViewTableViewCell else {
+            guard let cell = dequeReusableCell(PickerViewTableViewCell.self) else {
                 return UITableViewCell()
             }
             cell.configure(name: fieldName)
