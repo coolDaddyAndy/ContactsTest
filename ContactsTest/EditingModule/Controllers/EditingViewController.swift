@@ -65,8 +65,8 @@ final class EditingViewController: UIViewController {
     }
     
     private func authFields() -> Bool {
-        if userModel.firstName != "" ||
-            userModel.lastName != "" ||
+        if userModel.firstName != "Add some text" ||
+            userModel.lastName != "Add some text" ||
             userModel.birthday != "" ||
             userModel.gender != "" ||
             userModel.gender != "No specified" {
